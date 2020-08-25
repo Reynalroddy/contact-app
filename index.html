@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact list app</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/5a67af7b34.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <style>
+      body {
+        background-color: black;
+        color: white;
+      }
+      img {
+        border-radius: 50%;
+        margin: 0 auto;
+      }
+      li {
+
+        color: black;
+      }
+      .button {
+        border: none;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
+
+      .addbtn {
+        float: right;
+      }
+      .button5 {
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row text-center">
+        <h2 class="">Contacts</h2>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="&#9906; search"
+          id="searchInput"
+        />
+        <img src="images/use.jpg" alt="Avatar" style="width: 200px;" />
+        <div class="addBtn">
+          <button
+            class="btn btn-primary button5"
+            data-toggle="modal"
+            data-target="#myModal"
+             id="addBtn"
+          >
+            ADD
+          </button>
+        </div>
+      </div>
+    </div>
+      <div class="container">
+        <div class="list-group" id="list">
+          <!--
+        <li class="list-group-item d-flex justify-content-between align-items-center my-1">
+          <span class="name">Abdul</span>
+          <span class="number">08101006314</span>
+          <div class="editDel">
+            <span class="fas fa-edit mr-2"></span>
+            <span class="fas fa-trash"></span>
+          </div>
+         
+        </li>-->
+       
+        </div>
+      </div>
+
+      <!-- The Modal -->
+      <div class="modal fade" id="myModal">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content" style="color: black;">
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title">Add new contact</h4>
+              <button type="button" class="close" data-dismiss="modal">
+                &times;
+              </button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+              <input
+                id="names"
+                type="text"
+                name="name"
+                placeholder="Name"
+                required
+              />
+              <br />
+              <input
+                id="number"
+                type="text"
+                name="number"
+                placeholder="phone number"
+                required
+              />
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <button
+                id="save"
+                type="button"
+                class="btn btn-danger"
+                data-dismiss="modal"
+              >
+                save
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="app.js">
+
+    </script>
+  </body>
+</html>
